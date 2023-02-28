@@ -1,5 +1,44 @@
-titulo = document.getElementById("p_titulo");
-function funCambiar(){
-    titulo.textContent=" CRUZ.";
+// Elementos del html
+let titulo, parrafo, divdos, contenedor, cuerpo;
+titulo = document.getElementById("titulo");
+parrafo = document.getElementById("parrafo");
+divdos = document.getElementById("div_imagen");
+contenedor = document.getElementById("conte");
+cuerpo = document.getElementById("cuerpo");
 
+// Lorem ipsum
+let lore1,lore2,lore3,lore4;
+lore1=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec suscipit velit, non euismod odio. Nulla pretium, orci nec tristique consequat, lorem dui euismod orci, quis fringilla ante odio eget massa. Aenean pretium augue non nisi tincidunt malesuada. Nam tincidunt pellentesque hendrerit. Nullam ullamcorper nunc et quam euismod hendrerit. Aenean a eros lacinia, interdum felis sit amet, malesuada tellus. Mauris lacinia mauris in ex ullamcorper, a aliquam tortor eleifend. Nam felis arcu, ullamcorper non enim non, consequat ullamcorper ligula. Phasellus ex nibh, tristique sit amet dapibus eget, malesuada eget purus. Nunc sed placerat enim, a tincidunt felis. Ut auctor ipsum nec tortor eleifend, vel semper massa ornare. Suspendisse volutpat vitae felis vitae elementum. Aenean consequat odio eget enim viverra, non pretium nisi lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis nibh ac tortor auctor posuere. Quisque diam massa, condimentum quis mauris id, aliquet fringilla nulla.\n\n Vivamus luctus libero vel enim ultricies, id laoreet mauris eleifend. Donec auctor ornare dui. Nulla sit amet leo mi. Nulla non orci vel tortor ultrices sollicitudin. Morbi pretium felis vel augue suscipit, in eleifend ex tincidunt. Quisque auctor luctus quam convallis rutrum. Pellentesque lobortis tristique lacinia. Nunc euismod arcu eu maximus cursus. Nulla tincidunt nulla ligula, at maximus metus consectetur vitae.\n\n Nullam rhoncus vel tortor eu dignissim. Mauris ullamcorper dolor a lectus imperdiet blandit. Phasellus at velit laoreet erat blandit tempor. Aenean metus nunc, semper eu dapibus ac, sollicitudin eget neque. Donec sed efficitur risus. Suspendisse lobortis justo dolor, a dapibus sem semper nec. Curabitur in mollis elit, vitae lacinia dolor. Vestibulum erat metus, facilisis vel aliquet at, suscipit non metus. Integer erat libero, bibendum nec ullamcorper sit amet, ornare quis arcu. Maecenas faucibus orci elit, volutpat feugiat magna viverra id. Quisque a porttitor nibh. Quisque dignissim pulvinar tortor ut aliquam.";
+lore2=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis massa nec feugiat faucibus. Maecenas lacus eros, viverra eu sollicitudin ac, cursus et felis. Mauris laoreet tempor ante non efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse sed lacus placerat, iaculis risus nec, facilisis turpis. Nunc pellentesque justo ut risus fermentum, egestas molestie massa scelerisque. Duis semper a tellus vel congue. Nullam at felis at ipsum mattis congue. Donec ac efficitur purus. Donec eros ipsum, bibendum nec urna eget, euismod vestibulum nulla. Ut at tellus vel felis scelerisque condimentum id suscipit mi. Nullam malesuada quis sapien id varius. Vestibulum erat ante, tristique sit amet libero sed, venenatis dapibus ligula. Integer molestie felis ipsum, at maximus libero sodales quis. Nunc tempor sodales ex in sodales. Etiam odio nibh, elementum ac neque vehicula, auctor finibus enim.\n\n Aliquam suscipit ligula ac sem pretium egestas. Praesent non ex vitae lectus varius mattis non non velit. Nulla vitae venenatis nibh. Quisque convallis sit amet tortor sit amet varius. Maecenas ex mauris, porttitor non nibh eu, ultricies auctor lacus. Donec vitae tempor augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla dictum leo commodo eros facilisis, vel tempor purus scelerisque. Fusce sit amet mollis est. Praesent eget ligula volutpat lacus tempor viverra. Vivamus bibendum risus sollicitudin condimentum sollicitudin.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse semper arcu vel magna sodales convallis. Duis pellentesque vitae arcu in porta. Cras id lorem molestie, tempus leo sed, mollis ex. Vivamus tortor metus, molestie vel ante ac, pulvinar vestibulum felis. Ut molestie massa sed mi placerat, id porttitor arcu laoreet. Nam a elit scelerisque, interdum mauris nec, commodo purus. In dignissim dictum magna sit amet venenatis. Nulla non risus mollis, pellentesque neque sed, ullamcorper ipsum.";
+lore3=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisi ex, euismod at tellus euismod, sagittis maximus nulla. Nam eget facilisis ligula. Quisque non sollicitudin urna. In congue augue et finibus hendrerit. Duis vel congue lorem. Suspendisse potenti. Nam vitae erat nec ligula tempor ullamcorper quis vitae elit. Sed pulvinar scelerisque ex, a euismod purus rhoncus non. Maecenas in ultrices dui. Aliquam nisi neque, sagittis eu sem in, maximus vulputate odio. Nam feugiat nunc eu dignissim mattis. Ut id velit enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tellus velit, gravida ut tempor eu, luctus a dui. Sed malesuada, enim et volutpat lobortis, neque est fermentum velit, ac pulvinar diam turpis a ante.\n\n Duis id rhoncus urna. Nullam eleifend risus sed augue malesuada cursus. Quisque iaculis accumsan nisl, vel faucibus tortor pellentesque in. Fusce in dolor venenatis, tincidunt tellus ut, lobortis sapien. Vestibulum et massa scelerisque, interdum dui sit amet, tempus ex. Aliquam id neque at turpis pulvinar scelerisque nec eu nulla. Donec eu velit eu turpis euismod congue vel tempor tortor.\n\n Cras auctor non libero sit amet commodo. Nam sagittis quam elit, eget ultrices elit placerat non. Cras accumsan quam lacinia, vulputate turpis ac, tristique velit. Sed tincidunt, ligula et tincidunt congue, lorem augue placerat libero, sed congue massa metus non urna. Phasellus a dolor porttitor, tempus sem vitae, blandit ligula. In quis aliquet quam. Sed id placerat lectus, a euismod felis. Sed porttitor in sem et commodo. Donec condimentum tortor nisl, nec gravida est interdum id. Proin ac felis at sem ornare aliquam eget sit amet felis. Etiam ac lectus vel magna fringilla mollis. Fusce dignissim diam vitae ligula vulputate mollis.";
+lore4=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam risus, imperdiet ac lacus non, consectetur lobortis leo. Suspendisse posuere elit vitae nisi aliquam, at scelerisque orci bibendum. Vivamus viverra urna dolor, ac aliquet ipsum sodales vel. Donec quam turpis, tristique a risus vel, consectetur eleifend enim. Vestibulum posuere et lacus in faucibus. Nam a justo ornare felis rhoncus cursus in euismod metus. Phasellus vestibulum nisi sit amet massa sollicitudin, sed interdum justo blandit. Maecenas quis quam eu arcu sollicitudin dignissim volutpat eget nisi. Cras erat ipsum, placerat ut commodo ac, interdum eget ex. Sed pharetra eu nibh id imperdiet. Morbi ac erat a erat mollis malesuada quis non mi. Nam nec luctus metus. Fusce et turpis vel quam fermentum suscipit in id nisi. Ut id urna justo.\n\n Suspendisse ut enim ut velit pulvinar congue at non est. Phasellus egestas placerat lorem, eget egestas libero viverra quis. Sed vitae nulla consectetur, ultrices justo nec, egestas est. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vel nisi at nisl venenatis fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n Nullam rutrum blandit leo eu ornare. Aliquam rutrum diam ut dignissim maximus. Nam et tellus eget ex ultricies rhoncus. Curabitur non libero diam. Pellentesque dictum vel nisl in consectetur. Aliquam rutrum orci id ligula condimentum tincidunt. Duis laoreet metus a felis bibendum aliquet. Quisque eget tristique leo. In hac habitasse platea dictumst. Nunc lacinia nibh vel diam iaculis commodo. Mauris euismod, nisi nec eleifend scelerisque, felis leo congue nisi, vehicula luctus dolor dolor in lectus. Mauris imperdiet ac velit vitae vulputate. Duis ut dolor bibendum, condimentum dolor non, tincidunt elit. Suspendisse non ante vitae lectus consequat viverra. Ut ut fermentum purus."
+
+// Datos de la pagina
+let cont_titulos = ["VENUS.","CRUZ.","MUSA.","ANGEL."];
+let cont_parrafos = [lore1,lore2,lore3,lore4];
+let cont_img = ["venus.jpg","cruz.jpg","musa.jpg","angel.jpg"];
+let color_cuerpo = ["#EFD795","#9E0000","#000","#BDC1CA"];
+
+let x=0;
+function funcAnterior(){
+    if(x<=0){
+        x=3;
+    }else{
+        x--;
+    }
+    titulo.innerText = cont_titulos[x];
+    parrafo.innerText = cont_parrafos[x];
+    divdos.style.backgroundImage = "url('sources/"+cont_img[x]+"')";
+    cuerpo.style.backgroundColor = color_cuerpo[x];
+}
+function funcSiguiente(){
+    if(x>=3){
+        x=0;
+    }else{
+        x++;
+    }
+    titulo.innerText = cont_titulos[x];
+    parrafo.innerText = cont_parrafos[x];
+    divdos.style.backgroundImage = "url('sources/"+cont_img[x]+"')";
+    cuerpo.style.backgroundColor = color_cuerpo[x];
 }

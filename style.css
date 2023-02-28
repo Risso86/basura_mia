@@ -3,54 +3,40 @@
     margin: 0;
     border: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: #999;
 }
-body{
-    background-color: #EFD795;
-    color: rgb(99, 99, 99);
-}
-.contenedor{
-    position: absolute;
-    left: 5%;
-    top: 5%;
+.conte{
     width: 90%;
-    height: fit-content;
-    background-color: #FCFBF2;
-    margin-bottom: 100px;
-    border-radius: 15px;
-    margin: 0% 0% 10% 0%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
 }
-.divuno{
-    width: 50%;
-    text-align: center;
-}
-.parrafo{
-    margin: 5% 5% 10% 5%;
-    text-align: justify;
+button{
+    position: absolute;
+    height: 100%;
+    width: 5%;
     font-size: x-large;
 }
-.titulo{
-    margin: 10% 0% 0% 0%;
-    font-size: xx-large;
+.ant{
+    top: 0;
+    left: 0;
+}
+.sig{
+    top: 0;
+    right: 0;
+}
+.divuno{
+    text-align: center;
+    width: 40%;
+    margin: 5% 0% 5% 10%;
+    text-align: justify;
 }
 .divdos{
     position: absolute;
-    right: 0;
     top: 0;
-    width: 50%;
+    right: 5%;
+    width: 40%;
     height: 100%;
-    background-image: url("sources/venus.jpg");
     background-position: center;
     background-size: cover;
-}
-.blu{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-.blu:hover{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    transition: .5s;
 }
